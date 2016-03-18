@@ -1,0 +1,9 @@
+<div class="text-center">
+  <% if user_signed_in? %>
+    <p class="lead">
+      <%= t(".welcome", name: current_user.name) %>
+    </p>
+  <% else %>
+    <%= link_to t(".vkontakte_auth"), user_omniauth_authorize_path(:vkontakte) %>
+  <% end %>
+</div>

@@ -9,8 +9,14 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'bootstrap-sass'
+gem 'devise'
+gem 'omniauth-vkontakte'
+gem 'dotenv-rails'
+
 group :development, :test do
   gem 'pry-rails'
+  gem 'pry-nav'
 end
 
 group :development do
