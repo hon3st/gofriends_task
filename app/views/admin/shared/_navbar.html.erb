@@ -1,0 +1,14 @@
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <%= link_to t(".panel"), admin_root_path, class: "navbar-brand" %>
+  </div>
+
+  <ul class="nav navbar-nav pull-left">
+    <li class="nav"><%= link_to t(".users"), admin_users_path %></li>
+    <li class="nav"><%= link_to t(".messages"), admin_root_path %></li>
+  </ul>
+
+  <ul class="nav navbar-nav pull-right">
+    <li><%= link_to t(".logout"), destroy_employee_session_path, method: :delete %></li>
+  </ul>
+</div>
