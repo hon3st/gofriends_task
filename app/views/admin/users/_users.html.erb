@@ -14,7 +14,7 @@
         <td><%= image_tag(user.image, width: 100) %></td>
         <td><%= user.uid %></td>
         <td><%= user.name %></td>
-        <td><%= link_to user.vk_url, user.vk_url, target: :blank %></td>
+        <td><%= link_to user.profile_url, user.profile_url, target: :blank %></td>
       </tr>
     <% end %>
   </tbody>

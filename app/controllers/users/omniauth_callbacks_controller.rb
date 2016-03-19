@@ -1,4 +1,6 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  before_action :redirect_employee
+
   def vkontakte
     @user = User.from_omniauth(request.env["omniauth.auth"])
 
