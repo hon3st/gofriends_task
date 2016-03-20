@@ -10,8 +10,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
+gem 'simple_form'
 gem 'devise'
 gem 'omniauth-vkontakte'
+gem 'vkontakte_api'
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'dotenv-rails'
 
 group :development, :test do

@@ -3,6 +3,17 @@ ru:
     header:
       logout: "Выйти"
 
+  activerecord:
+    errors:
+      messages:
+        blank: "Не может быть пустым"
+
+  helpers:
+    submit:
+      message:
+        create: "Создать сообщение"
+        update: "Обновить сообщение"
+
   home:
     index:
       welcome: "Привет, %{name}"
@@ -11,7 +22,7 @@ ru:
   users:
     omniauth_callbacks:
       vkontakte:
-        notice: "Вы вошли с помощью Вконтакте"
+        notice: "Вы вошли с помощью Вконтакте. Вам добавилась фотография в альбом GoFriends"
         alert: "Не удалось войти"
 
   admin:
@@ -32,3 +43,25 @@ ru:
         id: "ID Вконтакте"
         name: "Имя"
         url: "Ссылка"
+    messages:
+      index:
+        title: "Сообщения"
+        add: "Добавить"
+        no_messages: "Нет сообщений"
+      new:
+        title: "Добавить сообщение"
+      edit:
+        title: "Редактировать сообщение"
+      create:
+        notice: "Сообщение создано"
+      update:
+        notice: "Сообщение обновлено"
+      destroy:
+        notice: "Сообщение удалено"
+      messages:
+        image: "Картинка"
+        description: "Описание"
+        actions: "Действия"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены ?"

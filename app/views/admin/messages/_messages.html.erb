@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t(".image") %></th>
+      <th><%= t(".description") %></th>
+      <th><%= t(".actions") %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% messages.each do |message| %>
+      <tr>
+        <td><%= image_tag(message.image, width: 100) %></td>
+        <td><%= message.description %></td>
+        <td>
+          <%= link_to t(".edit"), edit_admin_message_path(message) %>
+          <%= link_to t(".delete"), [:admin, message], method: :delete, data: { confirm: t(".confirm") } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

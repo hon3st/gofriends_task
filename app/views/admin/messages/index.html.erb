@@ -1,0 +1,8 @@
+<h1><%= t(".title") %></h1>
+<%= link_to t(".add"), new_admin_message_path %>
+
+<% if @messages.present? %>
+  <%= render 'messages', messages: @messages %>
+<% else %>
+  <p><%= t(".no_messages") %></p>
+<% end %>

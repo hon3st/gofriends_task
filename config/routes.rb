@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'home#index'
     resources :users, only: [:index]
+    resources :messages, except: [:show]
   end
 end

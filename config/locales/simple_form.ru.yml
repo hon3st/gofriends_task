@@ -1,0 +1,9 @@
+ru:
+  simple_form:
+    required:
+      text: "Нужно заполнить"
+      mark: "*"
+    labels:
+      message:
+        image: "Картинка"
+        description: "Описание"
