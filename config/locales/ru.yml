@@ -1,0 +1,34 @@
+ru:
+  shared:
+    header:
+      logout: "Выйти"
+
+  home:
+    index:
+      welcome: "Привет, %{name}"
+      vkontakte_auth: "Войти с помощью Вконтакте"
+
+  users:
+    omniauth_callbacks:
+      vkontakte:
+        notice: "Вы вошли с помощью Вконтакте"
+        alert: "Не удалось войти"
+
+  admin:
+    shared:
+      navbar:
+        panel: "Панель"
+        users: "Пользователи"
+        messages: "Сообщения"
+        logout: "Выйти"
+    home:
+      index:
+        hello: "Привет, %{email}"
+    users:
+      index:
+        no_users: "Нет пользователей"
+      users:
+        image: "Картинка"
+        id: "ID Вконтакте"
+        name: "Имя"
+        url: "Ссылка"

@@ -1,0 +1,5 @@
+<% if @users.present? %>
+  <%= render 'users', users: @users %>
+<% else %>
+  <p><%= t(".no_users") %></p>
+<% end %>
