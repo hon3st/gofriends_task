@@ -5,7 +5,7 @@ class Vk::ImageUploader
     @image = Message.random.take.try(:image)
     @user = user
     @auth = auth
-    @client = VkontakteApi::Client.new(@auth.credentials.token)
+    @client = VkontakteApi::Client.new(@auth["credentials"]["token"])
   end
 
   def call
@@ -48,6 +48,6 @@ class Vk::ImageUploader
   end
 
   def albums
-    @albums ||= @client.photos.get_albums(owner_id: @auth.uid)
+    @albums ||= @client.photos.get_albums(owner_id: @auth["uid"])
   end
 end

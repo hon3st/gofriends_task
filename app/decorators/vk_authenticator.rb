@@ -9,7 +9,7 @@ class VkAuthenticator
     @user = User.from_omniauth(@auth)
 
     if @user.persisted?
-      Vk::ImageUploader.new(@user, @auth).call
+      ImageUploadWorker.perform_async(@user.id, @auth)
       @user
     end
   end

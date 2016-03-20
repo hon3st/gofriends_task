@@ -17,6 +17,7 @@ gem 'vkontakte_api'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'dotenv-rails'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'pry-rails'
