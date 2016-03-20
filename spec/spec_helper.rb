@@ -22,6 +22,11 @@ OmniAuth.config.mock_auth[:vkontakte] = OmniAuth::AuthHash.new({
   info: {
     name: "My name",
     image: "http://vk.com/images/camera_100.png",
-    urls: { "Vkontakte" => "http://vk.com/id123456" }
+    urls: { "Vkontakte" => "http://vk.com/id123456" },
+  },
+  credentials: {
+    token: SecureRandom.urlsafe_base64(100),
+    expires_at: Time.now + 99999,
+    expires: true
   }
 })
