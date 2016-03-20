@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
       user.profile_url = auth.info.urls[auth.provider.capitalize]
     end
   end
+
+  def image_upload_allowed?
+    last_image_upload_at.nil? || last_image_upload_at <= Time.zone.now - 1.day
+  end
+
+  def update_image_upload_time
+    touch :last_image_upload_at
+  end
 end
