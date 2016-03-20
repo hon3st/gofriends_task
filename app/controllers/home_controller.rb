@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
+  before_action :redirect_employee, only: [:index]
+
   def index
-    redirect_to admin_root_path if employee_signed_in?
   end
 end
