@@ -39,4 +39,33 @@ describe User do
       end
     end
   end
+
+  describe "#image_upload_allowed?" do
+    context "when last_image_upload_at is not set" do
+      it "returns true" do
+        user.last_image_upload_at = nil
+        expect(user.image_upload_allowed?).to be true
+      end
+    end
+
+    context "when last_image_upload_at is within last 24 hours" do
+      it "returns false" do
+        user.last_image_upload_at = Time.zone.now
+        expect(user.image_upload_allowed?).to be false
+      end
+    end
+
+    context "when last_image_upload_at is more than 1 day ago" do
+      it "returns true" do
+        user.last_image_upload_at = Time.zone.now - 2.days
+        expect(user.image_upload_allowed?).to be true
+      end
+    end
+  end
+
+  describe "#update_image_upload_time" do
+    it "updates user's last upload time" do
+      expect{user.update_image_upload_time}.to change{user.last_image_upload_at}
+    end
+  end
 end
