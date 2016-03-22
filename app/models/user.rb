@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   end
 
   def image_upload_allowed?
-    last_image_upload_at.nil? || last_image_upload_at <= Time.zone.now - 1.day
+    last_image_upload_at.nil? || last_image_upload_at <= 1.day.ago
   end
 
   def update_image_upload_time

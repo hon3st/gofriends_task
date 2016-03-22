@@ -1,4 +1,6 @@
+require 'webmock/rspec'
 require 'omniauth'
+require 'sidekiq/testing'
 
 RSpec.configure do |config|
   Dir["./spec/support/**/*.rb"].sort.each { |f| require f}
@@ -30,3 +32,5 @@ OmniAuth.config.mock_auth[:vkontakte] = OmniAuth::AuthHash.new({
     expires: true
   }
 })
+
+Sidekiq::Testing.fake!

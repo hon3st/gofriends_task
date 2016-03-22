@@ -30,7 +30,7 @@ describe User do
       end
 
       it "returns user" do
-        expect(User.from_omniauth(vkontakte_auth)).to be_kind_of User
+        expect(User.from_omniauth(vkontakte_auth)).to be_instance_of User
       end
 
       it "creates user with right info" do

@@ -9,3 +9,7 @@ def login_as_employee(employee)
   fill_in :employee_password, with: default_password
   click_button "Log in"
 end
+
+def logout
+  click_link "Выйти"
+end
