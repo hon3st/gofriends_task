@@ -12,7 +12,7 @@ class Vk::ImageUploader
     return unless @image
 
     if @user.image_upload_allowed?
-      upload(@image)
+      upload
       @user.update_image_upload_time
     end
   end
@@ -40,7 +40,7 @@ class Vk::ImageUploader
   end
 
   def get_album_by_name(name)
-    albums.select { |album| album.title == name }.first
+    albums.find { |album| album.title == name }
   end
 
   def album_exists?(name)
