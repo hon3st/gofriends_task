@@ -19,7 +19,7 @@ class Vk::ImageUploader
 
   private
 
-  def upload(image)
+  def upload
     album = get_or_create_album(ALBUM_NAME)
     server = @client.photos.get_upload_server(album_id: album.aid)
     photos_info = VkontakteApi.upload(url: server.upload_url, photo: @image.path)
