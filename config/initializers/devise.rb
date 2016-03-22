@@ -13,7 +13,7 @@ Devise.setup do |config|
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
 
-  config.omniauth :vkontakte, ENV["VK_API_KEY"], ENV["VK_API_SECRET"],
+  config.omniauth :vkontakte, Rails.application.secrets.vk_api_key, Rails.application.secrets.vk_api_secret,
     {
       scope: 'photos',
       display: 'popup',
